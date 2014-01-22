@@ -50,7 +50,7 @@ See the [Avro documentation](http://avro.apache.org/docs/1.7.5/gettingstartedjav
 
 ### Dependency management
 
-sbt:
+When using sbt add the following lines to `build.sbt`:
 
 ```
 resolvers ++= Seq(
@@ -62,7 +62,7 @@ libraryDependencies ++= Seq(
 )
 ```
 
-gradle:
+When using gradle add the following lines to `build.gradle`:
 
 ```
 repositories {
