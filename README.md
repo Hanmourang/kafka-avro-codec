@@ -42,7 +42,7 @@ configuration of avro-maven-plugin in your `pom.xml`.
 
 The codec assumes you are using Avro with code generation, i.e. you create an Avro schema (see
 [twitter.avsc](src/test/avro/twitter.avsc)) and then compile the schema into Java code.  "With code generation" is the
-scenario where you would use `SpecificDatumWriter` and `SpecificDatumReader` in Avro (which is what the codec does)
+scenario where you would use `SpecificDatumWriter` and `SpecificDatumReader` in Avro (which is what this codec does)
 instead of `GenericDatumWriter` and `GenericDatumReader`.
 
 See the [Avro documentation](http://avro.apache.org/docs/1.7.5/gettingstartedjava.html) for details.
