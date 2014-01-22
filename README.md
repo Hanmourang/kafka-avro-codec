@@ -61,7 +61,7 @@ repositories {
 }
 
 dependencies {
-  compile "com.miguno:kafka-avro-codec_2.10:0.1.0-SNAPSHOT"
+  compile 'com.miguno:kafka-avro-codec_2.10:0.1.0-SNAPSHOT'
 }
 ```
 
