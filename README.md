@@ -38,7 +38,43 @@ configuration of avro-maven-plugin in your `pom.xml`.
 
 ## Using the codec in Kafka
 
+### Implementing a custom codec for your data records
+
+Let us assume you have defined an Avro schema for Twitter tweets, and you use this schema for data messages that you
+sent into a Kafka topic (see [twitter.avsc](src/test/avro/twitter.avsc)).  Here's how you would implement an Avro
+encoder/decoder class that you could pass to Kafka:
+
+```scala
+package your.app
+
+import kafka.utils.VerifiableProperties
+import com.miguno.kafka.avro.AvroEncoder
+import com.miguno.avro.Tweet // <-- This is your Avro record, see twitter.avsc
+
+class TweetAvroEncoder[Tweet](props: VerifiableProperties = null) extends AvroEncoder[Tweet](props,
+  Tweet.getClassSchema)
+
+class TweetAvroDecoder[Tweet](props: VerifiableProperties = null) extends AvroDecoder[Tweet](props,
+  Tweet.getClassSchema)
+```
+
+
+### Using the custom codec in a Kafka producer
+
 TODO
+
+
+### Using the custom codec in a Kafka consumer
+
+```scala
+val topic = "zerg.hydra" // name of the Kafka topic you are reading from
+val numThreads = 3 // number of threads for reading from that topic (note: #partitions should be >= 3 in this example)
+val topicCountMap = Map(topic -> numThreads)
+val valueDecoder = new TweetAvroDecoder[Tweet]
+val keyDecoder = valueDecoder // or use `null` in case you explicitly not want to use keys (note that in Kafka 0.8
+                              // this means some topic partitions may never see data)
+val consumerMap = consumerConnector.createMessageStreams(topicCountMap, keyDecoder, valueDecoder)
+```
 
 
 <a name="Development"></a>
