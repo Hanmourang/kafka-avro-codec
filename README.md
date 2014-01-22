@@ -142,6 +142,11 @@ val consumerMap = consumerConnector.createMessageStreams(topicCountMap, keyDecod
     $ ./sbt clean test
 
 
+## Packaging the code
+
+    $ ./sbt clean package
+
+
 ## Publishing build artifacts
 
 ### Configure Clojars.org user credentials
