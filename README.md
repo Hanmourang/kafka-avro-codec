@@ -38,6 +38,34 @@ configuration of avro-maven-plugin in your `pom.xml`.
 
 ## Using the codec in Kafka
 
+### Dependency management
+
+sbt:
+
+```
+resolvers ++= Seq(
+  "clojars-repository" at "https://clojars.org/repo"
+)
+
+libraryDependencies ++= Seq(
+  "com.miguno" % "kafka-avro-codec_2.10" % "0.1.0-SNAPSHOT"
+)
+```
+
+gradle:
+
+```
+repositories {
+  mavenCentral()
+  maven { url 'https://clojars.org/repo' }
+}
+
+dependencies {
+  compile "com.miguno:kafka-avro-codec_2.10:0.1.0-SNAPSHOT"
+}
+```
+
+
 ### Implementing a custom codec for your data records
 
 Let us assume you have defined an Avro schema for Twitter tweets, and you use this schema for data messages that you
