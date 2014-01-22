@@ -81,8 +81,8 @@ dependencies {
 ### Implementing a custom codec for your data records
 
 Let us assume you have defined an Avro schema for Twitter tweets, and you want to use this schema for data messages that
-you sent into a Kafka topic (see [twitter.avsc](src/test/avro/twitter.avsc)).  To implement an Avro encoder/decoder pair
-for Kafka you would need to extend two base classes:
+you sent into a Kafka topic (see [twitter.avsc](src/test/avro/twitter.avsc)).  To implement an accompanying Avro
+encoder/decoder pair for Kafka you would need to extend two base classes:
 
 * [AvroEncoder](src/main/scala/com/miguno/kafka/avro/AvroEncoder.scala)
 * [AvroDecoder](src/main/scala/com/miguno/kafka/avro/AvroDecoder.scala)
