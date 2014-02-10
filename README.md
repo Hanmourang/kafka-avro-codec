@@ -181,7 +181,7 @@ Publish the build artifacts via:
 Code contributions, bug reports, feature requests etc. are all welcome.
 
 If you are new to GitHub please read [Contributing to a project](https://help.github.com/articles/fork-a-repo) for how
-to send patches and pull requests to avro-hadoop-starter.
+to send patches and pull requests to kafka-avro-codec.
 
 
 <a name="License"></a>
