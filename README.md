@@ -45,7 +45,7 @@ The codec assumes you are using Avro with code generation, i.e. you create an Av
 scenario where you would use `SpecificDatumWriter` and `SpecificDatumReader` in Avro (which is what this codec does)
 instead of `GenericDatumWriter` and `GenericDatumReader`.
 
-See the [Avro documentation](http://avro.apache.org/docs/1.7.5/gettingstartedjava.html) for details.
+See the [Avro documentation](http://avro.apache.org/docs/1.7.6/gettingstartedjava.html) for details.
 
 
 ### Dependency management
@@ -129,9 +129,9 @@ val consumerMap = consumerConnector.createMessageStreams(topicCountMap, keyDecod
 ## Build requirements
 
 * Scala 2.10.3
-* Java JDK 6 or 7
 * sbt 0.10.3
-* [Avro](http://avro.apache.org/) 1.7.5
+* Java JDK 6 or 7
+* [Avro](http://avro.apache.org/) 1.7.6
 
 
 ## Building the code
