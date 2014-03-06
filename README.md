@@ -60,7 +60,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.miguno" % "kafka-avro-codec_2.10" % "0.1.0-SNAPSHOT"
+  "com.miguno" % "kafka-avro-codec_2.10" % "0.1.1-SNAPSHOT"
 )
 ```
 
@@ -73,7 +73,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.miguno:kafka-avro-codec_2.10:0.1.0-SNAPSHOT'
+  compile 'com.miguno:kafka-avro-codec_2.10:0.1.1-SNAPSHOT'
 }
 ```
 
