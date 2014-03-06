@@ -50,7 +50,7 @@ See the [Avro documentation](http://avro.apache.org/docs/1.7.6/gettingstartedjav
 
 ### Dependency management
 
-_Note: The build artifacts published in Clojars.org are built against Java 7._
+_Note: The build artifacts published in Clojars.org are built against Java 6._
 
 When using sbt add the following lines to `build.sbt`:
 
