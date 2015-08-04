@@ -60,7 +60,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.miguno" % "kafka-avro-codec_2.10" % "0.1.1-SNAPSHOT"
+  "com.miguno" %% "kafka-avro-codec" % "0.1.1"
 )
 ```
 
@@ -73,7 +73,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.miguno:kafka-avro-codec_2.10:0.1.1-SNAPSHOT'
+  compile 'com.miguno:kafka-avro-codec_2.10:0.1.1'
 }
 ```
 
@@ -128,8 +128,8 @@ val consumerMap = consumerConnector.createMessageStreams(topicCountMap, keyDecod
 
 ## Build requirements
 
-* Scala 2.10.3
-* sbt 0.10.3
+* Scala 2.10.5
+* sbt 0.13.8
 * Java JDK 6 or 7
 * [Avro](http://avro.apache.org/) 1.7.6
 
